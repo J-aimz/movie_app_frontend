@@ -3,21 +3,21 @@ import SearchBar from "../components/SearchBar";
 import { RootState } from "../utils/store";
 import { useDispatch, useSelector } from "react-redux";
 import useGetMovieTitle from "../utils/useGetMovieTitle";
-import { addPageCount, reducePageCount } from "../utils/movieDataSlice";
+// import { addPageCount, reducePageCount } from "../utils/movieDataSlice";
 
 export default function LandingPage() {
   const movies = useSelector((state: RootState) => state.movieData.movies);
-  const searchValue = useSelector((state: RootState) => state.movieData.search);
-  const pageCount = useSelector(
-    (state: RootState) => state.movieData.pageCount
-  );
-  const dispatch = useDispatch();
+  // const searchValue = useSelector((state: RootState) => state.movieData.search);
+  // const pageCount = useSelector(
+  //   (state: RootState) => state.movieData.pageCount
+  // );
+  // const dispatch = useDispatch();
 
   const isloading = useSelector(
     (state: RootState) => state.movieData.isLoading
   )
 
-  const { getMovieTitle } = useGetMovieTitle();
+  // const { getMovieTitle } = useGetMovieTitle();
 
   // async function getPage(type: string) {
   //   if (type === "next") {
