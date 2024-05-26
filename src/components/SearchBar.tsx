@@ -33,7 +33,7 @@ const SearchBar = () => {
   async function getSearchHistory() {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_base_url}/Get-Search-History`
+        `${process.env.REACT_APP_base_url}/api-v1/Movie/Get-Search-History`
       );
       const data = res.data.data;
       dispatch(setSearchHistory(data));

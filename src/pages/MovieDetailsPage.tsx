@@ -11,7 +11,9 @@ const MovieDetailsPage = () => {
   useEffect(() => {
     async function getMovieDetails(id: string) {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_base_url}/${id}`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_base_url}api-v1/Movie/${id}`
+        );
         setData(res.data.data);
       } catch (err) {
         console.log("logging error: ", err);
