@@ -10,7 +10,7 @@ const useGetMovieTitle = () => {
     try {
       dispatch(init());
       dispatch(setIsLoading(true));
-      const res = await axios.get(`${process.env.REACT_APP_base_url}/search/`, {
+      const res = await axios.get(`${process.env.REACT_APP_base_url}/api-v1/Movie/Search/`, {
         params: {
           title: title,
           page: page,

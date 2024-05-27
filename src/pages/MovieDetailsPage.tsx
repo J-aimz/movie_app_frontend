@@ -12,7 +12,7 @@ const MovieDetailsPage = () => {
     async function getMovieDetails(id: string) {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_base_url}api-v1/Movie/${id}`
+          `${process.env.REACT_APP_base_url}/api-v1/Movie/${id}`
         );
         setData(res.data.data);
       } catch (err) {
